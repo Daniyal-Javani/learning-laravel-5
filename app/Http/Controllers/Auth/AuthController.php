@@ -32,7 +32,7 @@ class AuthController extends Controller {
 	 */
 	public function __construct()
 	{
-		$this->auth = $auth;
+		
 	}
 
 		/**

@@ -119,7 +119,7 @@ class ArticlesController extends Controller
 	private function createArticle(ArticleRequest $request)
 	{
 		$article = Auth::user()->articles()->create($request->all());
-
+		
 		$this->syncTags($article, $request->input('tag_list'));
 
 		return $article;
