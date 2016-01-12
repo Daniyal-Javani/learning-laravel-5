@@ -50,7 +50,7 @@ class ArticlesController extends Controller
 	 */
 	public function create()
 	{
-		$tags = Tag::lists('name' , 'id');
+		$tags = Tag::lists('name' , 'id')->all();
 
 		return view('articles.create', compact('tags'));
 	}
@@ -79,7 +79,7 @@ class ArticlesController extends Controller
 	 */
 	public function edit(Article $article)
 	{
-		$tags = Tag::lists('name' , 'id');
+		$tags = Tag::lists('name' , 'id')->all();
 
 		return view('articles.edit', compact('article' , 'tags'));
 	}
